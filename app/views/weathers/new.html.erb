@@ -9,7 +9,7 @@
       <%= form_with url: weathers_path do |f| %>
         <div class="form-group">
           <label for="city">City</label>
-          <%= f.text_field :city, class: "form-control", placeholder: "City" %>
+          <%= f.text_field :city, class: "form-control", placeholder: "City", required: true %>
         </div>
         <div class="form-group">
           <label for="country">Country</label>
