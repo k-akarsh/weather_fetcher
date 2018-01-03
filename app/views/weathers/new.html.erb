@@ -1,5 +1,23 @@
-<%= form_with url: weathers_path do |f| %>
-  <%= f.text_field :city %>
-  <%= f.text_field :country %>
-  <%= f.submit %>
-<% end %>
+<div class="container" style="float: none;margin: 0 auto; width: 25%;">
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <h3> Current Weather</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_with url: weathers_path do |f| %>
+        <div class="form-group">
+          <label for="city">City</label>
+          <%= f.text_field :city, class: "form-control", placeholder: "City" %>
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <%= f.text_field :country, class: "form-control", placeholder: "Country" %>
+        </div>
+        <%= f.submit 'Search', class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row" id="target-response"></div>
+</div>

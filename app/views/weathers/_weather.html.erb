@@ -1,0 +1,43 @@
+<div class="row mt-4">
+  <div class="col-md-12">
+    <h4>Weather in <%=response['name']%>, <%=response['sys']['country']%></h4>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-4">
+    <%=image_tag "http://openweathermap.org/img/w/#{response['weather'][0]['icon']}.png"%>
+  </div>
+  <div class="col-md-8">
+    <%=response['weather'][0]['description']%>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <td>Temperature</td>
+	<td><%=response['main']['temp']%> &#8451;</td>
+      </tr>
+      <tr>
+        <td>Pressure</td>
+        <td><%=response['main']['pressure']%> hpa</td>
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td><%=response['main']['humidity']%> %</td>
+      </tr>
+      <tr>
+        <td>Sunrise</td>
+        <td><%=Time.at(response['sys']['sunrise']).strftime('%I:%M %P')%></td>
+      </tr>
+      <tr>
+        <td>Sunset</td>
+        <td><%=Time.at(response['sys']['sunset']).strftime('%I:%M %P')%></td>
+      </tr>
+      <tr>
+        <td>Wind</td>
+        <td><%=response['wind']['speed']%> m/s</td>
+      </tr>
+    </table>
+  </div>
+</div>
