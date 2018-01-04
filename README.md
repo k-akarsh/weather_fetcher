@@ -4,6 +4,10 @@
 
 Weather fetcher is an app built in Ruby on Rails that displays weather at different geographic locations. It uses Open Weather Map JSON API to get realtime weather data.
 
+## Demo
+
+A demo of the app can be found hosted on Heroku: https://weather-fetcher.herokuapp.com/
+
 ## Instructions:
 
 - Run bundle install: ```bundle install```
